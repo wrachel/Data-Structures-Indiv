@@ -33,7 +33,10 @@ public class Main {
       //menu options
         menu.put(1, new Main("IntByReference", () -> IntByReference.main(null) ) );
         menu.put(2, new Main("Matrix", () -> Matrix.main(null) ) );
-      
+        menu.put(3, new Main("Queue Iterator", () -> QueueTester.main(null)));
+        menu.put(4, new Main("Merge Queues", ()-> MergingQueues.main(null)));
+        menu.put(5, new Main("Reverse Queues", ()-> reverseQueues.main(null)));
+
         //prints the menu
         System.out.println("Menu:");
 
