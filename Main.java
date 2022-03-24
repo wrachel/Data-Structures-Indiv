@@ -31,11 +31,11 @@ public class Main {
         Map<Integer, Main> menu = new HashMap<>();
 
       //menu options
-        menu.put(1, new Main("IntByReference", () -> IntByReference.main(null) ) );
-        menu.put(2, new Main("Matrix", () -> Matrix.main(null) ) );
-        menu.put(3, new Main("Queue Iterator", () -> QueueTester.main(null)));
-        menu.put(4, new Main("Merge Queues", ()-> MergingQueues.main(null)));
-        menu.put(5, new Main("Reverse Queues", ()-> reverseQueues.main(null)));
+        menu.put(1, new Main("TT0 Challenge: IntByReference", () -> IntByReference.main(null) ) );
+        menu.put(2, new Main("TT0 Challenge: Matrix", () -> Matrix.main(null) ) );
+        menu.put(3, new Main("TT1 Challenge: Queue Iterator", () -> QueueTester.main(null)));
+        menu.put(4, new Main("TT1 Challenge: Merge Queues", ()-> MergingQueues.main(null)));
+        menu.put(5, new Main("TT1 Challenge: Reverse Queues", ()-> reverseQueues.main(null)));
 
         //prints the menu
         System.out.println("Menu:");
