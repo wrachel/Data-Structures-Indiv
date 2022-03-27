@@ -14,6 +14,9 @@
 2. [Merging Queues](https://replit.com/@RachelWei1/Data-Structures-Indiv#MergingQueues.java)
 3. [Reversing Queues](https://replit.com/@RachelWei1/Data-Structures-Indiv#reverseQueues.java)
 
+#### TT2 Challenges:
+[link to reflection](https://wrachel.github.io/week1/)
+1. [Calculator](https://replit.com/@RachelWei1/Data-Structures-Indiv?v=1#Calculator.java)
 
 
 ## Individual Links
