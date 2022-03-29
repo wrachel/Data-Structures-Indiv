@@ -30,3 +30,5 @@ WEEK 0: score is 2.9/3, [Review Ticket](https://github.com/wrachel/tri3Individua
 
 WEEK 1: individual score is 3/4, Total score is 4.1/5: [Review Ticket](https://github.com/wrachel/Data-Structures-Indiv/issues/1)
 
+WEEK 2: TOTAL: 5/5, individual 2/2, team 3/3 [Review Ticket](https://github.com/wrachel/Data-Structures-Indiv/issues/2)
+
