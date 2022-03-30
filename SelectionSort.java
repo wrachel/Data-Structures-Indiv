@@ -9,7 +9,7 @@ public class SelectionSort extends Sorts{
         super(size);
     }
 
-    void sort(ArrayList<Integer> arr)
+    void SelectionSort(ArrayList<Integer> arr)
     {
         Integer n = arr.size();
 
@@ -48,7 +48,7 @@ public class SelectionSort extends Sorts{
         for(int i = 0; i < TIMES; i ++) {
             SelectionSort ob = new SelectionSort(SIZE);
             ArrayList<Integer> arr = ob.getData();
-            ob.sort(arr);
+            ob.SelectionSort(arr);
 
             System.out.print("Sorted array: ");
             ob.printArray(arr);

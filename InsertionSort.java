@@ -11,7 +11,7 @@ public class InsertionSort extends Sorts{
         super(size);
     }
 
-    void sort(ArrayList<Integer> arr)
+    void InsertionSort(ArrayList<Integer> arr)
     {
         int n = arr.size();
         for (int i = 1; i < n; ++i) {
@@ -49,7 +49,7 @@ public class InsertionSort extends Sorts{
         for(int i = 0; i < TIMES; i ++) {
             InsertionSort a = new InsertionSort(SIZE);
             ArrayList<Integer> arr = a.getData();
-            a.sort(arr);
+            a.InsertionSort(arr);
 
             System.out.print("Sorted array: ");
             a.printArray(arr);
