@@ -20,16 +20,18 @@ public class SelectionSort extends Sorts{
         {
             // Find the minimum element in unsorted array
             int min_idx = i;
-            for (int j = i+1; j < n; j++)
-                if (arr.get(j) < arr.get(min_idx))
+            for (int j = i+1; j < n; j++) {
+                if (arr.get(min_idx) > arr.get(j)) {
                     min_idx = j;
-
-            // Swap the found minimum element with the first element
-            int temp = arr.get(min_idx);
-            arr.set(min_idx, arr.get(i));
-            arr.set(i, temp);
+                }
+            }
+            if(min_idx != i) {
+                // Swap the found minimum element with the first element
+                int temp = arr.get(i);
+                arr.set(i, arr.get(min_idx));
+                arr.set(min_idx, temp);
+            }
         }
-        FinalArr = arr;
     }
 
     public String toString(){
