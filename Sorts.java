@@ -34,22 +34,7 @@ public class Sorts {
 
     public static void main(String[] args) {
         int sum=0, time=0, TIMES=12, SIZE=5000;
-
-//        for(int i=0; i< TIMES; i++) {
-//            Sorts s = new Sorts(SIZE);
-//            for(int j = 0; j<s.getData().size(); j++) {
-//                // To see data, uncomment next line
-//                // System.out.println(s.getData());
-//                sum += s.getData().get(j);
-//            }
-//            System.out.println("Average random: " + sum / ((i+1)*SIZE));
-//            System.out.println("Nanoseconds: " + s.getTimeElapsed());
-//            time += s.getTimeElapsed();
-//        }
-//        System.out.println("Average random: " + sum / (TIMES*SIZE));
-//        System.out.println("Total Nanoseconds: " + time );
-//        System.out.println("Total Seconds: " + time /1000000000.0);
-//
+        //BUBBLE SORT
         for(int i=0; i< TIMES; i++) {
             BubbleSort s = new BubbleSort(SIZE);
             for(int j = 0; j<s.getData().size(); j++) {
@@ -65,6 +50,7 @@ public class Sorts {
         System.out.println("BubbleSort Total Nanoseconds: " + time );
         System.out.println("BubbleSort Total Seconds: " + time /1000000000.0);
 
+        //SELECTION SORT
         sum=0;
         time=0;
         for(int i=0; i< TIMES; i++) {
@@ -82,6 +68,7 @@ public class Sorts {
         System.out.println("SelectionSort Total Nanoseconds: " + time );
         System.out.println("SelectionSort Total Seconds: " + time /1000000000.0);
 
+        //INSERTION SORT
         sum=0;
         time=0;
         for(int i=0; i< TIMES; i++) {
@@ -99,6 +86,25 @@ public class Sorts {
         System.out.println("InsertionSort Total Nanoseconds: " + time );
         System.out.println("InsertionSort Total Seconds: " + time /1000000000.0);
 
+        //MERGE SORT
+        sum=0;
+        time=0;
+        for(int i=0; i< TIMES; i++) {
+            MergeSort s = new MergeSort(SIZE);
+            for(int j = 0; j<s.getData().size(); j++) {
+                // To see data, uncomment next line
+                //System.out.println(s.getData());
+                sum += s.getData().get(j);
+            }
+            //System.out.println("Average random: " + sum / ((i+1)*SIZE));
+            //System.out.println("Nanoseconds: " + s.getTimeElapsed());
+            time += s.getTimeElapsed();
+        }
+        System.out.println("\nMergeSort Average random: " + sum / (TIMES*SIZE));
+        System.out.println("MergeSort Total Nanoseconds: " + time );
+        System.out.println("MergeSort Total Seconds: " + time /1000000000.0);
+
     }
 
 }
+

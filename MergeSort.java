@@ -31,7 +31,7 @@ public class MergeSort extends Sorts{
 
 
     //this is the function that merges the two separate halves
-    void MergeSort(ArrayList<Integer> arr, int init, int middle, int end){
+    public void MergeSort(ArrayList<Integer> arr, int init, int middle, int end){
          int size1 = middle - init + 1;
          int size2 = end - middle;
 
@@ -41,11 +41,11 @@ public class MergeSort extends Sorts{
 
         //essentially adds all the values on the left into the leftArray
         for(int i = 0; i < size1; i++){
-            leftArray.add(arr.get(i));
+            leftArray.add(arr.get(init + i));
         }
         //adds all the values on the right into the rightArray
-        for(int i = 0; i < size2; i++){
-            rightArray.add(arr.get(i));
+        for(int j = 0; j < size2; j++){
+            rightArray.add(arr.get(middle + 1 + j));
         }
 
         int leftIndex = 0; //creates counter for leftArray
@@ -77,17 +77,14 @@ public class MergeSort extends Sorts{
              rightIndex++;
              mergedIndex++;
          }
-
-         finalarr = arr;
     }
 
     //this is the function that sorts the actual halves
     void sort(ArrayList<Integer> arr, int start, int end){
 
-        int middle = 0;
-        if(end-start > 0){
+        if(start < end){
             //sets what the middle of the array would be
-           middle = (end - 1)/2 + 1;
+           int middle = (end - 1)/2 + 1;
 
            //essentially what happens next is recursive function on the sorts that occurs until the array is 1
 
