@@ -11,7 +11,7 @@ public class SelectionSort extends Sorts{
         super(size);
     }
 
-    void SelectionSort(ArrayList<Integer> arr)
+    public void sort(ArrayList<Integer> arr)
     {
         Integer n = arr.size();
 
@@ -51,7 +51,7 @@ public class SelectionSort extends Sorts{
         for(int i = 0; i < TIMES; i ++) { //create 12 instances
             SelectionSort ob = new SelectionSort(SIZE); //create new SelectionSort instance with 5000 data entries
             ArrayList<Integer> arr = ob.getData(); //use getData() function from parent class; puts data entry into array
-            ob.SelectionSort(arr); //uses written sort function
+            ob.sort(arr); //uses written sort function
 
             System.out.print(ob.toString());
 

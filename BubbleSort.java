@@ -8,7 +8,7 @@ public class BubbleSort extends Sorts{
         super(size);
     }
 
-    void BubbleSort(ArrayList<Integer> arr){
+    public void sort(ArrayList<Integer> arr){
         int n = arr.size();
 
         for(int i = 0; i < n -1; i++){ //iterate through the array; needs to compare first two elements, then next two elements, etc.
@@ -36,16 +36,6 @@ public class BubbleSort extends Sorts{
     }
 
 
-//function to print the Array
-    void printArray(ArrayList<Integer> arr)
-    {
-        int n = arr.size();
-        for (int i=0; i<n; ++i) {
-            System.out.print(arr.get(i) + " ");
-        }
-        System.out.println("Bubble Sort Time Elapsed: "+ getTimeElapsed());
-    }
-
     public static void main(String args[])
     {
         ArrayList <Integer> times = new ArrayList<Integer>();
@@ -55,17 +45,17 @@ public class BubbleSort extends Sorts{
         for(int i = 0; i < TIMES; i ++) {
 
             //createnew instance of Bubble Sort
-            BubbleSort sort = new BubbleSort(SIZE);
+            BubbleSort newsort = new BubbleSort(SIZE);
 
             //get data & add to an arraylist
-            ArrayList<Integer> arr = sort.getData();
+            ArrayList<Integer> arr = newsort.getData();
 
             //sort the array using BubbleSort
-            sort.BubbleSort(arr);
+            newsort.sort(arr);
 
-            System.out.print(sort.toString());
+            System.out.print(newsort.toString());
 
-            times.add(sort.getTimeElapsed()); //add times to the times ArrayList
+            times.add(newsort.getTimeElapsed()); //add times to the times ArrayList
         }
 
             int smallest;

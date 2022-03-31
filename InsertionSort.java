@@ -12,7 +12,7 @@ public class InsertionSort extends Sorts{
         super(size);
     }
 
-    void InsertionSort(ArrayList<Integer> arr)
+    public void sort(ArrayList<Integer> arr)
     {
         int n = arr.size();
         for (int i = 1; i < n; ++i) { //iterate from arr[1] to arr[n]
@@ -53,7 +53,7 @@ public class InsertionSort extends Sorts{
             //create new instance of InsertionSort
             InsertionSort a = new InsertionSort(SIZE);
             ArrayList<Integer> arr = a.getData(); //assigns data from sort to arr
-            a.InsertionSort(arr); //sorts data in array
+            a.sort(arr); //sorts data in array
 
             System.out.print(a.toString());
 

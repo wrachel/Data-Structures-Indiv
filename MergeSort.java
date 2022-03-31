@@ -82,7 +82,7 @@ public class MergeSort extends Sorts{
     }
 
     //this is the function that sorts the actual halves
-    public void sort(ArrayList<Integer> arr, int start, int end){
+    void sort(ArrayList<Integer> arr, int start, int end){
 
         int middle = 0;
         if(end-start > 0){

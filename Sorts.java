@@ -3,6 +3,7 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Comparator;
 
+
 public class Sorts {
     private final ArrayList<Integer> data = new ArrayList<>();
     private final Duration timeElapsed;
@@ -14,9 +15,12 @@ public class Sorts {
             data.add((int)(Math.random() * (size+1)));
         }
         // use Inheritance and Polymorphism to replace data.sort with your own algorithm
-        data.sort(Comparator.naturalOrder());
+        sort(data);
         Instant end = Instant.now();    // time capture -- end
         this.timeElapsed = Duration.between(start, end);
+    }
+    public void sort(ArrayList<Integer> s){
+
     }
 
     public ArrayList<Integer> getData() {
