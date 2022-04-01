@@ -24,6 +24,8 @@ If r > l
 public class MergeSort extends Sorts{
 
     private ArrayList<Integer> finalarr;
+    private int comparisons=0;
+    private int swaps;
 
     public MergeSort(int SIZE){
         super(SIZE);
@@ -59,11 +61,13 @@ public class MergeSort extends Sorts{
                 //at the left index to the arr
                 arr.set(mergedIndex, leftArray.get(leftIndex));
                 leftIndex++;
+                comparisons++;
             }
             else{
                 //if value on right is bigger than the one on the left, set the arr to the value on the right
                 arr.set(mergedIndex, rightArray.get(rightIndex));
                 rightIndex++;
+                comparisons++;
             }
             mergedIndex++;//essentially repeats this while loop until all values are acocunted for
         }
@@ -71,19 +75,22 @@ public class MergeSort extends Sorts{
              arr.set(mergedIndex, leftArray.get(leftIndex));
              leftIndex++;
              mergedIndex++;
+             comparisons++;
          }
          else if(rightIndex < size2){// if there are still values left in right arraylist but not left one
              arr.set(mergedIndex, rightArray.get(rightIndex));
              rightIndex++;
              mergedIndex++;
+             comparisons++;
          }
     }
 
     //this is the function that sorts the actual halves
-    void sort(ArrayList<Integer> arr, int start, int end){
+    public void sort(ArrayList<Integer> arr, int start, int end){
 
         if(start < end){
-            //sets what the middle of the array would be
+            comparisons++;
+            //sets what the middle of the array would bd
            int middle = (end - 1)/2 + 1;
 
            //essentially what happens next is recursive function on the sorts that occurs until the array is 1
@@ -108,6 +115,18 @@ public class MergeSort extends Sorts{
         return s;
     }
 
+    public int getComparisons(){
+        return this.comparisons;
+    }
+    public int getSwaps(){
+        return this.swaps;
+    }
+
+//    void printcomparisons(){
+//        System.out.println(this.comparisons);
+//    }
+
+    //tester method
     public static void main(String args[]){
         ArrayList<Integer> times = new ArrayList<Integer>();
 
@@ -122,6 +141,7 @@ public class MergeSort extends Sorts{
 
             a.toString();
             times.add(a.getTimeElapsed());
+            //a.printcomparisons();
         }
 
         //add times to the sum
@@ -130,6 +150,7 @@ public class MergeSort extends Sorts{
         }
         double averageTime = sum / TIMES; //divide sum by TIMES to get average time
         System.out.println("average time: " + averageTime + "nanoseconds");
+
     }
     }
 

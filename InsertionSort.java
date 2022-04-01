@@ -7,6 +7,8 @@ To sort an array of size n in ascending order:
 */
 public class InsertionSort extends Sorts{
     private ArrayList<Integer> FinalArr;
+    private int comparisons;
+    private int swaps;
 
     public InsertionSort(int size) {
         super(size);
@@ -24,8 +26,11 @@ public class InsertionSort extends Sorts{
                 //if arr[i - 1] is greater than arr[i] then set i to i-1 and i-1 to i (essentially flip them)
                 arr.set(j + 1, arr.get(j));
                 j = j - 1;
+                swaps++;
+                comparisons++;
             }
             arr.set(j + 1, key); //sets arr at i-1 to i
+            comparisons++;
         }
 
         FinalArr = arr;
@@ -39,7 +44,12 @@ public class InsertionSort extends Sorts{
         String s = "Sorted Array: " + returnStatement + "\n" + "Time Elapsed: " + getTimeElapsed() + " nanoseconds" + "\n";
         return s;
     }
-
+    public int getComparisons(){
+        return this.comparisons;
+    }
+    public int getSwaps(){
+        return this.swaps;
+    }
     // Driver method
     public static void main(String args[])
     {

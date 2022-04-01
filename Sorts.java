@@ -22,6 +22,9 @@ public class Sorts {
     public void sort(ArrayList<Integer> s){
 
     }
+    public void sort(ArrayList<Integer> arr, int start, int end){
+
+    }
 
     public ArrayList<Integer> getData() {
         return data;
@@ -33,7 +36,7 @@ public class Sorts {
 
 
     public static void main(String[] args) {
-        int sum=0, time=0, TIMES=12, SIZE=5000;
+        int sum=0, time=0, TIMES=12, SIZE=5000, swaps=0, comparisons=0;
         //BUBBLE SORT
         for(int i=0; i< TIMES; i++) {
             BubbleSort s = new BubbleSort(SIZE);
@@ -45,10 +48,14 @@ public class Sorts {
             //System.out.println("Average random: " + sum / ((i+1)*SIZE));
             //System.out.println("Nanoseconds: " + s.getTimeElapsed());
             time += s.getTimeElapsed();
+            swaps = s.getSwaps();
+            comparisons = s.getComparisons();
         }
         System.out.println("BubbleSort Average random: " + sum / (TIMES*SIZE));
         System.out.println("BubbleSort Total Nanoseconds: " + time );
         System.out.println("BubbleSort Total Seconds: " + time /1000000000.0);
+        System.out.println("BubbleSort Comparisons: "+ comparisons);
+        System.out.println("BubbleSort swaps: "+ swaps);
 
         //SELECTION SORT
         sum=0;
@@ -63,10 +70,14 @@ public class Sorts {
             //System.out.println("Average random: " + sum / ((i+1)*SIZE));
             //System.out.println("Nanoseconds: " + s.getTimeElapsed());
             time += s.getTimeElapsed();
+            swaps = s.getSwaps();
+            comparisons = s.getComparisons();
         }
         System.out.println("\nSelectionSort Average random: " + sum / (TIMES*SIZE));
         System.out.println("SelectionSort Total Nanoseconds: " + time );
         System.out.println("SelectionSort Total Seconds: " + time /1000000000.0);
+        System.out.println("SelectionSort Comparisons: "+ comparisons);
+        System.out.println("SelectionSort swaps: "+ swaps);
 
         //INSERTION SORT
         sum=0;
@@ -81,10 +92,14 @@ public class Sorts {
             //System.out.println("Average random: " + sum / ((i+1)*SIZE));
             //System.out.println("Nanoseconds: " + s.getTimeElapsed());
             time += s.getTimeElapsed();
+            swaps = s.getSwaps();
+            comparisons = s.getComparisons();
         }
         System.out.println("\nInsertionSort Average random: " + sum / (TIMES*SIZE));
         System.out.println("InsertionSort Total Nanoseconds: " + time );
         System.out.println("InsertionSort Total Seconds: " + time /1000000000.0);
+        System.out.println("InsertionSort Comparisons: "+ comparisons);
+        System.out.println("InsertionSort swaps: "+ swaps);
 
         //MERGE SORT
         sum=0;
@@ -99,10 +114,14 @@ public class Sorts {
             //System.out.println("Average random: " + sum / ((i+1)*SIZE));
             //System.out.println("Nanoseconds: " + s.getTimeElapsed());
             time += s.getTimeElapsed();
+            swaps = s.getSwaps();
+            comparisons = s.getComparisons();
         }
         System.out.println("\nMergeSort Average random: " + sum / (TIMES*SIZE));
         System.out.println("MergeSort Total Nanoseconds: " + time );
         System.out.println("MergeSort Total Seconds: " + time /1000000000.0);
+        System.out.println("MergeSort Comparisons: "+ comparisons);
+        System.out.println("MergeSort swaps: None, merge sort does not have swaps");
 
     }
 

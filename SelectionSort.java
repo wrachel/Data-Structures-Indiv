@@ -6,6 +6,8 @@ import java.util.ArrayList;
 public class SelectionSort extends Sorts{
 
     private ArrayList<Integer> FinalArr;
+    private int comparisons;
+    private int swaps;
 
     public SelectionSort(int size) {
         super(size);
@@ -24,12 +26,14 @@ public class SelectionSort extends Sorts{
                 if (arr.get(min_idx) > arr.get(j)) {
                     min_idx = j;
                 }
+                comparisons++;
             }
             if(min_idx != i) {
                 // Swap the found minimum element with the first element
                 int temp = arr.get(i);
                 arr.set(i, arr.get(min_idx));
                 arr.set(min_idx, temp);
+                swaps++;
             }
         }
     }
@@ -41,6 +45,12 @@ public class SelectionSort extends Sorts{
         }
         String s = "Sorted Array: " + returnStatement + "\n" + "Time Elapsed: " + getTimeElapsed() + " nanoseconds" + "\n";
         return s;
+    }
+    public int getComparisons(){
+        return comparisons;
+    }
+    public int getSwaps(){
+        return swaps;
     }
 
 
