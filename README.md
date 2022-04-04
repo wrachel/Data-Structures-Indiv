@@ -20,6 +20,14 @@
 [link to reflection](https://wrachel.github.io/week1/)
 1. [Calculator](https://replit.com/@RachelWei1/Data-Structures-Indiv?v=1#Calculator.java)
 
+#### TT3 Challenges:
+[Link to reflection](https://wrachel.github.io/week3/)
+1. [bubble sort](https://replit.com/@RachelWei1/Data-Structures-Indiv#BubbleSort.java)
+2. [selection sort](https://replit.com/@RachelWei1/Data-Structures-Indiv#SelectionSort.java)
+3. [insertion sort](https://replit.com/@RachelWei1/Data-Structures-Indiv#InsertionSort.java)
+4. [Merge sort](https://replit.com/@RachelWei1/Data-Structures-Indiv#MergeSort.java)
+5. [Main sort function](https://replit.com/@RachelWei1/Data-Structures-Indiv#Sorts.java)
+
 
 ## Individual Links
 [link to Github Pages](https://wrachel.github.io)
@@ -34,3 +42,4 @@ WEEK 1: individual score is 3/4, Total score is 4.1/5: [Review Ticket](https://g
 
 WEEK 2: TOTAL: 5/5, individual 2/2, team 3/3 [Review Ticket](https://github.com/wrachel/Data-Structures-Indiv/issues/2)
 
+Week 3: 
