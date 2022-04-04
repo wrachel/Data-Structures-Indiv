@@ -1,5 +1,7 @@
 # Data Structures Individual Work
 
+## Link to seperate github pages: [https://github.com/wrachel/wrachel.github.io](https://github.com/wrachel/wrachel.github.io)
+
 #### TT0 Challenges:
 [link to reflection](https://wrachel.github.io/week0/)
 
