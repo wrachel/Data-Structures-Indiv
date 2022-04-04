@@ -80,4 +80,6 @@ public class LinkedList<T> {
     public LinkedList<T> getNext() {
         return this.nextNode;
     }
+
+
 }

@@ -33,6 +33,9 @@ public class Queue<T> implements Iterable<T> {
         }
         head = head.getNext();
     }
+    public void swap(T data){
+
+    }
 
     /**
      *  Returns the head object.
