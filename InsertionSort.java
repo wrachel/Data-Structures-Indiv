@@ -14,6 +14,9 @@ public class InsertionSort extends Sorts{
         super(size);
     }
 
+    //added constructor that calls super class with a parameter of an Array List of integers
+    public InsertionSort(ArrayList<Integer> arr) { super(arr); }
+
     public void sort(ArrayList<Integer> arr)
     {
         int n = arr.size();
@@ -50,6 +53,7 @@ public class InsertionSort extends Sorts{
     public int getSwaps(){
         return this.swaps;
     }
+    public ArrayList<Integer> getFinalArr() { return FinalArr;}
     // Driver method
     public static void main(String args[])
     {

@@ -19,6 +19,14 @@ public class Sorts {
         Instant end = Instant.now();    // time capture -- end
         this.timeElapsed = Duration.between(start, end);
     }
+    //added new constructor with a parameter of an Array List of integers
+    public Sorts(ArrayList<Integer> arr) {
+        Instant start = Instant.now();
+        //sorts the inputted Array List
+        sort(arr);
+        Instant end = Instant.now();    // time capture -- end
+        this.timeElapsed = Duration.between(start, end);
+    }
     public void sort(ArrayList<Integer> s){
 
     }
