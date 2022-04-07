@@ -37,6 +37,7 @@ public class Main {
         menu.put(5, new Main("TT1 Challenge: Reverse Queues", () -> reverseQueues.main(null)));
         menu.put(6, new Main("TT2 Challenges: Calculator", () -> Calculator.main(null)));
         menu.put(7, new Main("TT3 Challenge: Sorts", () ->  Sorts.main(null)));
+        menu.put(8, new Main("TT3 Option 2: Building own data structure & sort", () -> LL.main(null)));
 
         // prints the menu
         System.out.println("Menu:");

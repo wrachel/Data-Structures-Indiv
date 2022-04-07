@@ -40,29 +40,26 @@ class LL{
         //very simple swap
         int temp = a.data;
         a.data = b.data;
-        b.data = a.data;
+        b.data = temp;
     }
 
     public void BubbleSort(){
         if(head != null){ //if linkedlist is not empty then:
-            LinkedList2 current = null;
+            LinkedList2 currentNode = null;
             boolean status = false;
 
             do {
-                current = this.head; //start current on first node
+                currentNode = this.head; //start current on first node
                 status = false;//resets status for loop
 
-                while (current != null && current.next != null) { //while there are values in the
+                while (currentNode != null && currentNode.next != null) { //while there are values in the linked list
 
                     //swap values if left is greater than right
-                    if (current.data > current.next.data) {
-                        int temp = current.data;
-                        current.data = current.next.data;
-                        current.next.data = temp;
-
+                    if (currentNode.data > currentNode.next.data) {
+                        swapData(currentNode, currentNode.next);
                         status=true; //set status to true when node changes value
                     }
-                    current = current.next; //increments so we move on to next node
+                    currentNode = currentNode.next; //increments so we move on to next node
                 }
             }
             while(status);
@@ -131,7 +128,11 @@ class LL{
         linkedlist.printLinkedList();
 
         linkedlist.BubbleSort();
-        System.out.print("\n linkedlist after sorting: ");
+        System.out.print("\nlinkedlist after Bubble sorting: ");
+        linkedlist.printLinkedList();
+
+        linkedlist.BubbleSort();
+        System.out.print("\nlinkedlist after selection sorting: ");
         linkedlist.printLinkedList();
 
 

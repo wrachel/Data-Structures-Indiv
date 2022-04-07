@@ -24,7 +24,7 @@ If r > l
 public class MergeSort extends Sorts{
 
     private ArrayList<Integer> finalarr;
-    private int comparisons=0;
+    private int comparisons;
     private int swaps;
 
     public MergeSort(int SIZE){
