@@ -1,4 +1,4 @@
-proving that intellij & replit are synced
+proving that intellij & replit are synced through github
 
 # Data Structures Individual Work
 
