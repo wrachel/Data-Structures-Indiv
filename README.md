@@ -1,3 +1,5 @@
+proving that intellij & replit are synced
+
 # Data Structures Individual Work
 
 ## Link to seperate github pages: [https://github.com/wrachel/wrachel.github.io](https://github.com/wrachel/wrachel.github.io)
