@@ -38,6 +38,10 @@ public class Main {
         menu.put(6, new Main("TT2 Challenges: Calculator", () -> Calculator.main(null)));
         menu.put(7, new Main("TT3 Challenge: Sorts", () ->  Sorts.main(null)));
         menu.put(8, new Main("TT3 Option 2: Building own data structure & sort", () -> LL.main(null)));
+        menu.put(9, new Main("2015 FRQ Question 1", () -> ArrayWork.main(null)));
+        menu.put(10, new Main("2015 FRQ Question 2", () -> HiddenWord.main(null)));
+        menu.put(11, new Main("2015 FRQ Question 3", () -> SparseArray.main(null)));
+        menu.put(12, new Main("2015 FRQ Question 4", () -> NumberGroup.main(null)));
 
         // prints the menu
         System.out.println("Menu:");
